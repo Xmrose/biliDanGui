@@ -1,4 +1,5 @@
-﻿namespace biliDL
+﻿using System.Windows.Forms;
+namespace biliDL
 {
     partial class mainwin
     {
@@ -18,6 +19,17 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int WS_MINIMIZEBOX = 0x00020000;  // Winuser.h中定义  
+                CreateParams cp = base.CreateParams;
+                cp.Style = cp.Style | WS_MINIMIZEBOX;   // 允许最小化操作  
+                return cp;
+            }
         }
 
         #region Windows Form Designer generated code
@@ -58,7 +70,7 @@
             this.txtBox1.Name = "txtBox1";
             this.txtBox1.Size = new System.Drawing.Size(280, 17);
             this.txtBox1.TabIndex = 0;
-            this.txtBox1.Text = "http://www.bilibili.com/video/av12450/";
+            this.txtBox1.Text = "http://www.bilibili.com/video/av#/";
             this.txtBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eKeyD);
             this.txtBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.ePKeyD);
             // 
@@ -286,6 +298,7 @@
             this.Controls.Add(this.txtBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainwin";
             this.Opacity = 0.95D;
             this.Text = "Bilibili Video Downloader";
