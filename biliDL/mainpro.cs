@@ -164,6 +164,33 @@ namespace biliDL
             }
             sw.Close();
             fs.Close();
+            //starting convert into .ass
+            Process p = new Process();
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardInput = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.RedirectStandardError = true;
+            p.StartInfo.CreateNoWindow = true;
+            p.Start();
+
+            p.StandardInput.WriteLine(string.Format("danmaku2ass.py{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}",
+                " -o ",
+                string.Format("{0}.ass", cid),
+                " -s ", 
+                string.Format("{0}{1}{2}", txtBox2.Text, "x", txtBox3.Text),
+                " -fs ", 
+                string.Format("{0}", txtBox4.Text), 
+                " -dm ", 
+                string.Format("{0}", txtBox5.Text), 
+                " ",
+                string.Format("{0}.xml", cid)));
+            Application.DoEvents();
+            p.StandardInput.WriteLine("exit");
+
+            p.WaitForExit();
+            p.Close();
+            //end of convertion
         }
 
         public string special_com(string txt)   //escape character(s) goes here
@@ -226,6 +253,34 @@ namespace biliDL
         private void btn1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void eCkCg(object sender, EventArgs e)
+        {
+            if (!ckB2.Checked)
+            {
+                txtBox2.Visible = false;
+                txtBox3.Visible = false;
+                txtBox4.Visible = false;
+                txtBox5.Visible = false;
+
+                lbl3.Visible = false;
+                lbl4.Visible = false;
+                lbl5.Visible = false;
+                lbl6.Visible = false;
+            }
+            else
+            {
+                txtBox2.Visible = true;
+                txtBox3.Visible = true;
+                txtBox4.Visible = true;
+                txtBox5.Visible = true;
+
+                lbl3.Visible = true;
+                lbl4.Visible = true;
+                lbl5.Visible = true;
+                lbl6.Visible = true;                    
+            }
         }
     }
 }
