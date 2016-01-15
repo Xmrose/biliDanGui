@@ -99,10 +99,9 @@ namespace biliDL
 
                         if (ckB2.Checked)
                         {
-                            WebBrowser wb = new WebBrowser();
-                            HtmlDocument hd = wb.Document;
-                            wb.DocumentCompleted += eDocC;
-                            wb.Navigate(comment_url);   //downloading .xml comments            
+                            HtmlDocument hd = wB1.Document;
+                            wB1.DocumentCompleted += eDocC;
+                            wB1.Navigate(comment_url);   //downloading .xml comments
                         }
                     }
                 }
