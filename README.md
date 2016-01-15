@@ -1,5 +1,5 @@
 # biliDanGui
-A simple video downloader for Bilibili website only.
+A simple video downloader for Bilibili website user only.
 # Main Features
 1. Download video from Bilibili.com to local by simply enter url: http://www.bilibili.com/video/av#/
 2. Automatically generate a .ass subtitle file whcih corresponding to the video that you've downloaded.
