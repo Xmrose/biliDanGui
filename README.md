@@ -2,7 +2,7 @@
 A simple video downloader for Bilibili website user only.
 # Main Features
 1. Download video from Bilibili.com to local by simply enter url: http://www.bilibili.com/video/av#/
-2. Automatically generate an .ass subtitle file whcih corresponding to the video that you've downloaded.
+2. Automatically generate an .ass subtitle file which corresponding to the video that you've downloaded.
 
 # Two opensource files were used in this tool
 1. m13253/danmaku2ass(https://github.com/m13253/BiliDan#biligrab-danmaku2ass)
