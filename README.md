@@ -1,10 +1,10 @@
 # biliDanGui
-A simple video&Comments downloader for Bilibili website user only.
+A simple video&comments downloader for Bilibili website user only.
 
 简易B站视频弹幕下载器
 
 # Main Features
-1. Download video from Bilibili.com to local by simply enter url: http://www.bilibili.com/video/av#/ .
+1. Download video from Bilibili.com to your local machine by simply enter an url which like: http://www.bilibili.com/video/av#/ .
 2. Automatically generate an .ass subtitle file which corresponding to the video that you've downloaded.(If Download comments is checked)
 
 在程序地址栏输入观看地址并回车，即可开始下载。
