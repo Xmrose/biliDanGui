@@ -1,4 +1,5 @@
 # biliDanGui
+![]https://raw.githubusercontent.com/Xmrose/biliDanGui/master/screenshots/mainwindow.jpg
 A simple video downloader for Bilibili website user only.
 # Main Features
 1. Download video from Bilibili.com to local by simply enter url: http://www.bilibili.com/video/av#/
