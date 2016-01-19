@@ -25,7 +25,7 @@ A simple video&comments downloader for Bilibili website user only.
 # Screenshot
 ![](https://raw.githubusercontent.com/Xmrose/biliDanGui/master/screenshots/mainwindow.jpg)
 
-# Two opensource files were used in this tool
+# Two opensource files are used in this tool
 1. m13253/danmaku2ass(https://github.com/m13253/BiliDan#biligrab-danmaku2ass).
 2. fuckbilibili/BilibiliDownload(https://github.com/fuckbilibili/BilibiliDownload).
 
